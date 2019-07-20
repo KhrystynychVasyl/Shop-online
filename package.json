@@ -1,5 +1,5 @@
 {
-  "name": "node-save-form-to-file",
+  "name": "save-form-to-file",
   "version": "1.0.0",
   "description": "  ",
   "main": "server.js",
@@ -13,5 +13,14 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.16.4"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KhrystynychVasyl/Shop-online.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KhrystynychVasyl/Shop-online/issues"
+  },
+  "homepage": "https://github.com/KhrystynychVasyl/Shop-online#readme"
 }
