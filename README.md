@@ -1,4 +1,1 @@
-# Shop-online
-
-some txt
-git
+https://koldovsky.github.io/online-shop/
