@@ -37,7 +37,7 @@ class Cart {
     for (const id in this.cart) {
       const product = productList.getProductById(id);
       total += product.price * this.cart[id];
-      cartDomSting += `<div class="row" data-id="${id}"> 
+      cartDomSting += `<div class="row" data-id="${id}">
                     <div class="col-5">${product.title}</div>
                     <div class="col-3">${product.price}</div>
                     <div class="col-2">${this.cart[id]}</div>
@@ -50,7 +50,7 @@ class Cart {
                 <div class="row">
                     <div class="col-5"><strong>TOTAL</strong></div>
                     <div class="col-3"><strong>$${total}</strong></div>
-                </div>            
+                </div>
         </div>`;
     this.cartContainer.find('.cart-product-list-container').html(cartDomSting);
     this.cartContainer
@@ -77,16 +77,16 @@ class Cart {
     if (form.checkValidity()) {
       ev.preventDefault();
       fetch('order', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          clientName: document.querySelector('#client-name').value,
-          clientEmail: document.querySelector('#client-email').value,
-          cart: this.cart
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            clientName: document.querySelector('#client-name').value,
+            clientEmail: document.querySelector('#client-email').value,
+            cart: this.cart
+          })
         })
-      })
         .then(response => response.text())
         .then(responseText => {
           form.reset();
